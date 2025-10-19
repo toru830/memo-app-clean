@@ -7,7 +7,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
     color: #ffffff;
     line-height: 1.6;
     min-height: 100vh;
@@ -21,16 +21,17 @@ body {
 
 /* ヘッダー */
 .header {
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
     padding: 1rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     position: sticky;
     top: 0;
     z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .header-title {
@@ -112,8 +113,8 @@ body {
 }
 
 .quick-create-btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 1rem;
     color: #ffffff;
@@ -123,13 +124,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .quick-create-btn:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .quick-create-icon {
@@ -149,19 +151,20 @@ body {
 }
 
 .memo-item {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
     padding: 1.25rem;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     transition: all 0.3s;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .memo-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .memo-header {
@@ -275,19 +278,19 @@ body {
     right: 1.5rem;
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #ff6b6b, #ffa726, #42a5f5);
     border: none;
     border-radius: 50%;
     color: #ffffff;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.4);
     transition: all 0.3s;
     z-index: 50;
 }
 
 .fab:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.6);
 }
 
 /* 下部ナビゲーション */
@@ -296,37 +299,44 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
-    padding: 0.5rem;
+    padding: 0.75rem;
     z-index: 100;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item {
     flex: 1;
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.6);
-    padding: 0.75rem 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.75rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.3s;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0.25rem;
-    border-radius: 8px;
+    border-radius: 12px;
+    position: relative;
 }
 
 .nav-item.active {
-    color: #6366f1;
-    background: rgba(99, 102, 241, 0.1);
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
 .nav-item span {
-    font-size: 0.75rem;
-    font-weight: 500;
+    display: none; /* Hide text labels */
 }
 
 /* モーダル */
@@ -512,7 +522,7 @@ body {
     }
     
     .nav-item span {
-        font-size: 0.7rem;
+        display: none; /* Hide text labels */
     }
     
     .modal-content {
