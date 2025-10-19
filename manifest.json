@@ -1,0 +1,16 @@
+{
+  "name": "メモアプリ",
+  "short_name": "メモ",
+  "description": "シンプルで使いやすいメモアプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e1e2e",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "memo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
